@@ -1,0 +1,7 @@
+اخويا المطرقع المطرشم
+بص يرجولة هتعمل clone وبعدين composer install وبعدين هتكريت ملف .env وهتحط فيه بيانات الداتا بيز وتكريت داتا بيز بنفس الاسم اللي كتبته وبعدين اكتب php artisan key:generate وبعدين php artisan serve  وعيش ينجم
+
+عندك كدا كريت category and sub_category  و list all categories and all sub_categories
+
+api/categories (GET and POST)
+api/sub_categories(GET and POST)

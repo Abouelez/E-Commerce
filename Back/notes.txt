@@ -1,0 +1,10 @@
+GET /api/categories: Returns a list of all categories.
+POST /api/categories: Allows an admin user to add a new category.
+GET /api/brands: Returns a list of all brands.
+POST /api/brands: Allows an admin user to add a new brand.
+POST /api/subcategories: Allows an admin user to add a new subcategory.
+GET /api/products: Returns a list of all products.
+GET /api/products/{id}: Returns the details of a specific product identified by its ID.
+POST /api/products: Allows an admin user to add a new product.
+PUT /api/products/{id}: Allows an admin user to edit the details of an existing product.
+DELETE /api/products/{id}: Allows an admin user to delete a product.
