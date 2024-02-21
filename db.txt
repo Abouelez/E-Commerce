@@ -1,0 +1,4 @@
+categories(id, name, image).
+sub_categories(id, name, category_id, image).
+brand(id, name, image, owner) => ## owner will be added later.
+
