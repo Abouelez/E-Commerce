@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateCategory;
-use App\Http\Resources\CategoryCollection;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class CategoryController extends Controller
 {
@@ -32,7 +33,12 @@ class CategoryController extends Controller
      */
     public function store(CreateCategory $request)
     {
-        Category::create($request->all());
+        $image = $request->file('image');
+        $resizedImage = Image::make($image)->resize(300, 300)->encode('jpg');
+        $imagePath = "uploads/images/categoryImages/$request->name.jpg";
+        Storage::disk('public')->put($imagePath, $resizedImage);
+        Category::create(array_merge($request->except('image'), ['image' => $imagePath]));
+
         return response()->json('Category Created Successfully', 201);
     }
 

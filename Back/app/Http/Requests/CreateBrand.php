@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateSub_Category extends FormRequest
+class CreateBrand extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,8 @@ class CreateSub_Category extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|unique:sub_categories|min:3|max:100',
-            'category_id' => 'required',
+            'name' => 'required|string|unique:brands|min:3|max:100',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-
         ];
     }
 }

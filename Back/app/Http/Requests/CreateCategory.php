@@ -23,7 +23,7 @@ class CreateCategory extends FormRequest
     {
         return [
             'name' => 'required|string|unique:sub_categories|min:3|max:100',
-
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ];
     }
 }

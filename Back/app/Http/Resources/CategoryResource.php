@@ -18,6 +18,7 @@ class CategoryResource extends JsonResource
             'id' => $this->id,
             'name' => ucwords($this->name),
             'sub_categories' => Sub_CategoryResource::collection($this->whenLoaded('sub_categories')),
+            'image' => 'localhost:8000/storage/' . $this->image,
         ];
     }
 }

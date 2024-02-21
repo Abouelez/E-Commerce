@@ -10,9 +10,9 @@ class Sub_Category extends Model
 {
     use HasFactory;
 
-    
+
     protected $table = 'sub_categories';
-    protected $fillable = ['name', 'category_id'];
+    protected $fillable = ['name', 'category_id', 'image'];
 
 
     function category(): BelongsTo
