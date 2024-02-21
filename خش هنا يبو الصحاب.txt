@@ -3,5 +3,4 @@
 
 عندك كدا كريت category and sub_category  و list all categories and all sub_categories
 
-api/categories (GET and POST)
-api/sub_categories(GET and POST)
+
