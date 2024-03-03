@@ -1,0 +1,29 @@
+.side-filter{ 
+    border-right: 2px solid;
+    font-size: 22px;
+}
+
+.side-filter input{
+    margin: 2px 22px 2px 0px;
+}
+
+/* filter side style */
+.filter-title {
+    color: #555550; 
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 20px;
+    
+  }
+  .filter-sub {
+    color: #555550;
+    font-family: "Almarai";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 17px;
+    text-align: center;
+  }
+  .filter-sub input{
+    margin: 2px  40px; 
+  }

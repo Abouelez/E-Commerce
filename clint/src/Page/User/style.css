@@ -1,0 +1,12 @@
+.sidebar{
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    width: 15%;
+}
+
+.dash-content{
+    position: absolute;
+    right: 0;
+    width: 78%;
+}
