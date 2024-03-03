@@ -1,3 +1,3 @@
-api/categories        (GET and POST)
+api/categories        (All CRUD Done)
 api/sub_categories    (GET and POST)
 api/brands            (GET and POST)
