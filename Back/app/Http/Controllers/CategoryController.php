@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateCategory;
+use App\Http\Requests\UpdateCategory;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -47,7 +48,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return new CategoryResource($category);
     }
 
     /**
@@ -61,9 +62,20 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(UpdateCategory $request, Category $category)
     {
-        //
+        /** update name and image! (name and image is required ,
+         * if no change in any field of them send old data)
+        **/
+
+        $image = $request->file('image');
+        $resizedImage = Image::make($image)->resize(300, 300)->encode('jpg');
+        $imagePath = "uploads/images/categoryImages/$request->name.jpg";
+        Storage::disk('public')->put($imagePath, $resizedImage);
+        Storage::delete($category->image);
+        $category->update(array_merge($request->except('image'), ['image' => $imagePath]));
+
+        return response()->json('Category Updated Successfully!', 200);
     }
 
     /**
@@ -71,6 +83,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return response()->json('Category Deleted Successfully!', 204);
     }
 }
