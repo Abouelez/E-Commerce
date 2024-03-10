@@ -5,18 +5,17 @@ import AdminAllOrders from '../../Components/Admin/AdminAllOrders'
 import Pagination from '../../Components/Uitily/Pagination'
 const AdminAllOrdersPage = () => {
     return (
-        <Container >
-            <Row className='py-3'>
-                <Col sm="3" xs="2" md="2">
-                    <AdminSideBar />
-                </Col>
+        <Row className=' w-100 '>
+            <Col sm="3" xs="2" md="3" className='px-2 text-white bg-secondary position-relative'>
+                <AdminSideBar />
+            </Col>
 
-                <Col sm="9" xs="10" md="10">
-                    <AdminAllOrders />
-                    <Pagination />
-                </Col>
-            </Row>
-        </Container>
+            <Col sm="9" xs="10" md="8">
+                <AdminAllOrders />
+                <Pagination />
+            </Col>
+        </Row>
+
     )
 }
 export default AdminAllOrdersPage

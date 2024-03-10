@@ -1,40 +1,41 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import './admin.css'
 const AdminSideBar = () => {
     return (
-        <div className="sidebar">
-            <div className="d-flex flex-column">
-                <Link to="/admin/allorders" style={{ textDecoration: 'none' }}>
-                    <div className="admin-side-text mt-3 border-bottom p-2 mx-auto text-center">
-                        اداره الطلبات
+        <div className="sidebar  text-white bg-secondary position-fixed  dashboard-side ">
+            <div className="d-flex flex-column dash-side-box">
+                <Link to="/admin/allorders" style={{ textDecoration: 'none' }} className='w-100'>
+                    <div className="admin-side-text mt-3  p-2 text-center">
+                      Orders
                     </div>
                 </Link>
-                <Link to="/admin/allproducts" style={{ textDecoration: 'none' }}>
-                    <div className="admin-side-text my-1 border-bottom p-2 mx-auto text-center">
-                        اداره المنتجات
+                <Link to="/admin/allproducts" style={{ textDecoration: 'none' }} className='w-100'>
+                    <div className="admin-side-text my-1  p-2 text-center">
+                    Products
                     </div>
                 </Link>
-                <Link to="/admin/addbrand" style={{ textDecoration: 'none' }}>
-                    <div className="admin-side-text my-1 border-bottom p-2 mx-auto text-center">
-                        اضف ماركه
-                    </div>
-                </Link>
-
-                <Link to="/admin/addcategory" style={{ textDecoration: 'none' }}>
-                    <div className="admin-side-text my-1 border-bottom p-2 mx-auto text-center">
-                        اضف تصنيف
+                <Link to="/admin/addbrand" style={{ textDecoration: 'none' }}className='w-100'>
+                    <div className="admin-side-text my-1  p-2 text-center" >
+                     Add Brand
                     </div>
                 </Link>
 
-                <Link to="/admin/addsubcategory" style={{ textDecoration: 'none' }}>
-                    <div className="admin-side-text my-1 border-bottom p-2 mx-auto text-center">
-                        اضف تصنيف فرعي
+                <Link to="/admin/addcategory" style={{ textDecoration: 'none' }} className='w-100'>
+                    <div className="admin-side-text my-1  p-2 text-center">
+                    Add Category
                     </div>
                 </Link>
-                <Link to="/admin/addproduct" style={{ textDecoration: 'none' }}>
-                    <div className="admin-side-text my-1 border-bottom p-2 mx-auto text-center">
-                        اضف منتج
+
+                <Link to="/admin/addsubcategory" style={{ textDecoration: 'none' }} className='w-100'>
+                    <div className="admin-side-text my-1  p-2 text-center">
+                    Add Subcategory
+                     
+                    </div>
+                </Link>
+                <Link to="/admin/addproduct" style={{ textDecoration: 'none' }} className='w-100'>
+                    <div className="admin-side-text my-1  p-2 text-center">
+                    Add Product
                     </div>
                 </Link>
 

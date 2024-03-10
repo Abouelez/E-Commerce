@@ -5,18 +5,17 @@ import AdminAllProducts from '../../Components/Admin/AdminAllProducts'
 import Pagination from '../../Components/Uitily/Pagination'
 const AdminAllProductsPage = () => {
     return (
-        <Container >
-            <Row className='py-3'>
-                <Col sm="3" xs="2" md="2">
-                    <AdminSideBar />
-                </Col>
 
-                <Col sm="9" xs="10" md="10">
-                    <AdminAllProducts />
-                    <Pagination />
-                </Col>
-            </Row>
-        </Container>
+        <Row className=' w-100 '>
+            <Col sm="3" xs="2" md="3" className='px-2 text-white bg-secondary position-relative'>
+                <AdminSideBar />
+            </Col>
+
+            <Col sm="9" xs="10" md="8">
+                <AdminAllProducts />
+                <Pagination />
+            </Col>
+        </Row>
     )
 }
 

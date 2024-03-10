@@ -6,17 +6,16 @@ import Pagination from '../../Components/Uitily/Pagination'
 import AdminAddSubCategory from '../../Components/Admin/AdminAddSubCategory'
 const AdminAddSubCategoryPage = () => {
     return (
-        <Container >
-            <Row className='py-3'>
-                <Col sm="3" xs="2" md="2">
-                    <AdminSideBar />
-                </Col>
+        <Row className=' w-100 '>
+            <Col sm="3" xs="2" md="3" className='px-2 text-white bg-secondary position-relative'>
+                <AdminSideBar />
+            </Col>
 
-                <Col sm="9" xs="10" md="10">
-                     <AdminAddSubCategory />
-                </Col>
-            </Row>
-        </Container>
+            <Col sm="9" xs="10" md="8">
+                <AdminAddSubCategory />
+            </Col>
+        </Row>
+
     )
 }
 

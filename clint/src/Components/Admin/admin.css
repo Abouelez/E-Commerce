@@ -1,0 +1,27 @@
+.dashboard-side {
+    width: 25%;
+
+}
+
+.dash-side-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25% 0;
+    height: 53%;
+}
+
+.sidebar .admin-side-text {
+    text-align: left !important;
+}
+.sidebar a{
+    /* border-Bottom: 1px solid gray; */
+    padding: 0 15px;
+}
+.sidebar a:hover {
+    background-color: #ffffff;
+    color: white;
+    font-size: 30px;
+
+}
+

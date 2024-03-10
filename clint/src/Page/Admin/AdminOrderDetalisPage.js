@@ -12,7 +12,7 @@ const AdminOrderDetalisPage = () => {
                     <AdminSideBar />
                 </Col>
 
-                <Col sm="9" xs="10" md="10">
+                <Col sm="9" xs="10" md="8">
                     <AdminOrderDetalis />
                 </Col>
             </Row>

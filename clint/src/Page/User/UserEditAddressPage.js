@@ -5,8 +5,7 @@ import UserSideBar from '../../Components/User/UserSideBar'
 import UserAddAddress from '../../Components/User/UserAddAddress';
 import UserEditAddress from '../../Components/User/UserEditAddress';
 const UserEditAddressPage = () => {
-    return (
-        <Container >
+    return ( 
             <Row className='py-3'>
                 <Col sm="3" xs="2" md="2">
                     <UserSideBar />
@@ -15,8 +14,7 @@ const UserEditAddressPage = () => {
                 <Col sm="9" xs="10" md="10">
                   <UserEditAddress />
                 </Col>
-            </Row>
-        </Container>
+            </Row> 
     )
 }
 export default UserEditAddressPage
