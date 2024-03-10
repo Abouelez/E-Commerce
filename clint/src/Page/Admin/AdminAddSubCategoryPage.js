@@ -7,7 +7,7 @@ import AdminAddSubCategory from '../../Components/Admin/AdminAddSubCategory'
 const AdminAddSubCategoryPage = () => {
     return (
         <Row className=' w-100 '>
-            <Col sm="3" xs="2" md="3" className='px-2 text-white bg-secondary position-relative'>
+            <Col sm="3" xs="2" md="3" className='px-2 text-white bg-secondary position-relative min-vh-100'>
                 <AdminSideBar />
             </Col>
 
