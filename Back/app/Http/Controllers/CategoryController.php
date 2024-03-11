@@ -17,7 +17,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::with('sub_categories')->get();
+        //default 10 categories per page, or sent limit as a query param in request body
+        $categories = Category::with('sub_categories')->paginate($_REQUEST['limit'] ?? 10);
         return CategoryResource::collection($categories);
     }
 
@@ -66,7 +67,7 @@ class CategoryController extends Controller
     {
         /** update name and image! (name and image is required ,
          * if no change in any field of them send old data)
-        **/
+         **/
 
         $image = $request->file('image');
         $resizedImage = Image::make($image)->resize(300, 300)->encode('jpg');
