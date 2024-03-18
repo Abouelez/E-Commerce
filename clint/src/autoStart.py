@@ -30,14 +30,12 @@ def start_services():
     else:
         print("MySQL service is already running.")
 
-def start_apache():
-    # Path to XAMPP executable
+def start_apache(): 
     xampp_path = r'C:\xampp'
     subprocess.Popen([os.path.join(xampp_path, 'apache', 'bin', 'httpd.exe'), '-k', 'start'])
     print("Apache service started.")
 
-def start_mysql():
-    # Path to XAMPP executable
+def start_mysql(): 
     xampp_path = r'C:\xampp'
     subprocess.Popen([os.path.join(xampp_path, 'mysql', 'bin', 'mysqld.exe'), '--defaults-file=' + os.path.join(xampp_path, 'mysql', 'bin', 'my.ini'), '--standalone'])
     print("MySQL service started.")
@@ -50,12 +48,10 @@ def is_service_running(service_name):
 
  
 
-def open_folder_in_vscode(folder_path):
-    # Full path to VS Code executable
+def open_folder_in_vscode(folder_path): 
     vscode_path = r'path\Programs\Microsoft VS Code\Code.exe'
     
-    if os.path.exists(vscode_path):
-        # Command to open folder in VS Code
+    if os.path.exists(vscode_path): 
         subprocess.Popen([vscode_path, folder_path])
         print("Opened folder in VS Code.")
     else:
